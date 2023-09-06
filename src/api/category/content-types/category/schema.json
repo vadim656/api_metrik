@@ -31,18 +31,6 @@
         "videos",
         "audios"
       ]
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "sub_categories"
-    },
-    "sub_categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "categories"
     }
   }
 }
