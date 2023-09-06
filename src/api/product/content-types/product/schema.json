@@ -51,6 +51,10 @@
     },
     "Cat__s": {
       "type": "string"
+    },
+    "ART": {
+      "type": "uid",
+      "targetField": "Name"
     }
   }
 }
