@@ -1,0 +1,99 @@
+{
+  "collectionName": "components_attributes_attributes",
+  "info": {
+    "displayName": "Attributes",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Brand": {
+      "type": "string"
+    },
+    "Calc_type": {
+      "type": "string"
+    },
+    "Class_pozhar": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "Namotka_n": {
+      "type": "string"
+    },
+    "Ob_toshina": {
+      "type": "string"
+    },
+    "Overlock": {
+      "type": "boolean",
+      "default": false
+    },
+    "Price_m2": {
+      "type": "decimal"
+    },
+    "Shirina_v2": {
+      "type": "string"
+    },
+    "Step_type": {
+      "type": "string"
+    },
+    "Zashitniy_sloy": {
+      "type": "string"
+    },
+    "Vlagostoikost": {
+      "type": "string"
+    },
+    "Visota_Vorsa": {
+      "type": "decimal"
+    },
+    "Dlinna_doski": {
+      "type": "integer"
+    },
+    "Dosok_v_upakovke": {
+      "type": "integer"
+    },
+    "Zamok": {
+      "type": "string"
+    },
+    "Construkciya": {
+      "type": "string"
+    },
+    "Material_vorsa": {
+      "type": "string"
+    },
+    "Osnova": {
+      "type": "string"
+    },
+    "Ottenok": {
+      "type": "string"
+    },
+    "Poverhnost": {
+      "type": "string"
+    },
+    "Strana": {
+      "type": "string"
+    },
+    "Tip_risunka": {
+      "type": "string"
+    },
+    "Faska": {
+      "type": "string"
+    },
+    "Col_m2": {
+      "type": "decimal"
+    },
+    "Class": {
+      "type": "string"
+    },
+    "Pazmer_mm": {
+      "type": "string"
+    },
+    "Tolshina_doski": {
+      "type": "string"
+    },
+    "Shirina_doski": {
+      "type": "string"
+    }
+  }
+}
