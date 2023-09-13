@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_ps",
+  "info": {
+    "singularName": "class-p",
+    "pluralName": "class-ps",
+    "displayName": "Class_P"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

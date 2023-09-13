@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_hs",
+  "info": {
+    "singularName": "class-h",
+    "pluralName": "class-hs",
+    "displayName": "Class_H"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

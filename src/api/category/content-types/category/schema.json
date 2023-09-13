@@ -31,6 +31,18 @@
         "videos",
         "audios"
       ]
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand",
+      "mappedBy": "category"
+    },
+    "Filters": {
+      "type": "dynamiczone",
+      "components": [
+        "category.filter"
+      ]
     }
   }
 }

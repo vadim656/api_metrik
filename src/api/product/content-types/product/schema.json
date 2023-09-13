@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "text"
+      "type": "string"
     },
     "Desc": {
       "type": "richtext"
@@ -28,12 +28,6 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "mappedBy": "products"
-    },
-    "orders": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::order.order",
       "mappedBy": "products"
     },
     "Attr": {
@@ -55,6 +49,18 @@
     "ART": {
       "type": "uid",
       "targetField": "Name"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "products"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "products"
     }
   }
 }

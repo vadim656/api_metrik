@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order"
+    "displayName": "Order",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,11 +18,11 @@
     "Summ": {
       "type": "decimal"
     },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "inversedBy": "orders"
+    "Order_product": {
+      "displayName": "Order_product",
+      "type": "component",
+      "repeatable": true,
+      "component": "order-product.order-product"
     }
   }
 }

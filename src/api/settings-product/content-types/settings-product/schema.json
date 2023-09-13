@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings_products",
+  "info": {
+    "singularName": "settings-product",
+    "pluralName": "settings-products",
+    "displayName": "SettingsProduct"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dostavka": {
+      "type": "richtext"
+    },
+    "uslugi": {
+      "type": "richtext"
+    },
+    "oplata": {
+      "type": "richtext"
+    }
+  }
+}

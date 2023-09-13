@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "Brand": {
-      "type": "string"
-    },
     "Calc_type": {
       "type": "string"
     },
@@ -71,9 +68,6 @@
     "Poverhnost": {
       "type": "string"
     },
-    "Strana": {
-      "type": "string"
-    },
     "Tip_risunka": {
       "type": "string"
     },
@@ -83,9 +77,6 @@
     "Col_m2": {
       "type": "decimal"
     },
-    "Class": {
-      "type": "string"
-    },
     "Pazmer_mm": {
       "type": "string"
     },
@@ -94,6 +85,21 @@
     },
     "Shirina_doski": {
       "type": "string"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "class_h": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class-h.class-h"
+    },
+    "class_p": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class-p.class-p"
     }
   }
 }
