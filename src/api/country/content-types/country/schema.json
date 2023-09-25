@@ -26,6 +26,12 @@
       "relation": "manyToOne",
       "target": "api::country.country",
       "inversedBy": "countries"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "country"
     }
   }
 }

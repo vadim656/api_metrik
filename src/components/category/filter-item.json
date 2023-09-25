@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_category_filter_items",
+  "info": {
+    "displayName": "Filter-item"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand"
+    },
+    "class_hs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-h.class-h"
+    },
+    "class_ps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-p.class-p"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection.collection"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    }
+  }
+}

@@ -61,6 +61,29 @@
       "relation": "manyToOne",
       "target": "api::collection.collection",
       "inversedBy": "products"
+    },
+    "class_h": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-h.class-h",
+      "inversedBy": "products"
+    },
+    "class_p": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-p.class-p",
+      "inversedBy": "products"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "products"
+    },
+    "Connected_P": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }

@@ -38,11 +38,11 @@
       "target": "api::brand.brand",
       "mappedBy": "category"
     },
-    "Filters": {
-      "type": "dynamiczone",
-      "components": [
-        "category.filter"
-      ]
+    "Filter": {
+      "displayName": "Filter-item",
+      "type": "component",
+      "repeatable": true,
+      "component": "category.filter-item"
     }
   }
 }
