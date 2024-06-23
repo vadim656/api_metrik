@@ -5,9 +5,11 @@ module.exports = ({ env }) => ({
       playgroundAlways: true,
     },
   },
-  "apollo-sandbox": {
-    enabled: process.env.NODE_ENV === "production" ? false : true,
-    endpoint: "http://localhost:1337/graphql",
+  'import-export-entries': {
+    enabled: true,
+    config: {
+      // See `Config` section.
+    },
   },
   "fuzzy-search": {
     enabled: true,
@@ -45,6 +47,37 @@ module.exports = ({ env }) => ({
           },
         },
       ],
+    },
+  },
+  "rest-cache": {
+    enabled: false,
+    config: {
+      provider: {
+        name: "memory",
+        options: {
+          max: 32767,
+          maxAge: 3600,
+        },
+      },
+      strategy: {
+        contentTypes: [
+          // list of Content-Types UID to cache
+          "api::category.category",
+        ],
+      },
+    },
+  },
+  upload: {
+    config: {
+      provider: "local",
+      providerOptions: {
+        sizeLimit: 1000000 * 256 * 1024,
+      },
+      breakpoints: {
+        large: 1000,
+        small: 500,
+        xsmall: 64,
+      },
     },
   },
 });

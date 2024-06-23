@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "componentialities",
+  "info": {
+    "singularName": "componentiality",
+    "pluralName": "componentialities",
+    "displayName": "Componentiality"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "componentialities"
+    }
+  }
+}

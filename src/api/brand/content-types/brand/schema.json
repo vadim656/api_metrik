@@ -4,7 +4,7 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brand",
+    "displayName": "Бренды",
     "description": ""
   },
   "options": {
@@ -27,11 +27,8 @@
       "target": "api::collection.collection",
       "mappedBy": "brand"
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "brands"
+    "id_parser": {
+      "type": "string"
     }
   }
 }

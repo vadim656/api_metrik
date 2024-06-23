@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product",
+    "displayName": "Товары",
     "description": ""
   },
   "options": {
@@ -46,10 +46,6 @@
     "Cat__s": {
       "type": "string"
     },
-    "ART": {
-      "type": "uid",
-      "targetField": "Name"
-    },
     "brand": {
       "type": "relation",
       "relation": "manyToOne",
@@ -84,6 +80,233 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product"
+    },
+    "Rulon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-variables"
+    },
+    "calc_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::calc-type.calc-type",
+      "inversedBy": "products"
+    },
+    "klass_pozharnoj": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-pozhar.class-pozhar",
+      "inversedBy": "products"
+    },
+    "namotka": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::namotka-n.namotka-n",
+      "inversedBy": "products"
+    },
+    "obshhaya_tolshhina": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ob-toshina.ob-toshina",
+      "inversedBy": "products"
+    },
+    "proizvoditel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::manufacturer.manufacturer",
+      "inversedBy": "products"
+    },
+    "faska": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::faska.faska",
+      "inversedBy": "products"
+    },
+    "czveta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::color.color",
+      "inversedBy": "products"
+    },
+    "shirina": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shirina.shirina",
+      "inversedBy": "products"
+    },
+    "zashitniy_sloy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zashitniy-sloy.zashitniy-sloy",
+      "inversedBy": "products"
+    },
+    "vlagostoikost": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vlagostoikost.vlagostoikost",
+      "inversedBy": "products"
+    },
+    "visota_vorsa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::visota-vorsa.visota-vorsa",
+      "inversedBy": "tovaries"
+    },
+    "Slicing": {
+      "displayName": "Slicing",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.slicing"
+    },
+    "type_designs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::type-design.type-design",
+      "mappedBy": "products"
+    },
+    "views": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::view.view",
+      "mappedBy": "products"
+    },
+    "types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::type.type",
+      "mappedBy": "products"
+    },
+    "length": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::length.length",
+      "inversedBy": "products"
+    },
+    "surfaces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::surface.surface",
+      "mappedBy": "products"
+    },
+    "properties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::propertie.propertie",
+      "mappedBy": "products"
+    },
+    "appointments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::appointment.appointment",
+      "mappedBy": "tovaries"
+    },
+    "abrasions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::abrasion.abrasion",
+      "mappedBy": "products"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::form.form",
+      "mappedBy": "products"
+    },
+    "formats": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::format.format",
+      "mappedBy": "products"
+    },
+    "rooms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::room.room",
+      "mappedBy": "products"
+    },
+    "dimensions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dimension.dimension",
+      "mappedBy": "products"
+    },
+    "color_spectrums": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::color-spectrum.color-spectrum",
+      "mappedBy": "products"
+    },
+    "connection_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::connection-type.connection-type",
+      "mappedBy": "products"
+    },
+    "lock_connections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lock-connection.lock-connection",
+      "mappedBy": "products"
+    },
+    "bases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::basis.basis",
+      "mappedBy": "prtoducts"
+    },
+    "wood_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wood-type.wood-type",
+      "mappedBy": "products"
+    },
+    "gloss_levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gloss-level.gloss-level",
+      "mappedBy": "products"
+    },
+    "type_processings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::type-processing.type-processing",
+      "mappedBy": "products"
+    },
+    "materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::material.material",
+      "mappedBy": "products"
+    },
+    "weight": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::weight.weight",
+      "inversedBy": "products"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::package.package",
+      "mappedBy": "products"
+    },
+    "destination_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::destination-material.destination-material",
+      "mappedBy": "products"
+    },
+    "componentialities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::componentiality.componentiality",
+      "mappedBy": "products"
+    },
+    "ART": {
+      "type": "string"
+    },
+    "id_parser": {
+      "type": "string"
     }
   }
 }

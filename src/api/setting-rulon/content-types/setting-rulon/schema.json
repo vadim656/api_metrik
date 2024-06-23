@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "setting_rulons",
+  "info": {
+    "singularName": "setting-rulon",
+    "pluralName": "setting-rulons",
+    "displayName": "SettingRulon"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Step": {
+      "type": "decimal",
+      "default": 0.1,
+      "required": true,
+      "min": 0.1
+    },
+    "Enable": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

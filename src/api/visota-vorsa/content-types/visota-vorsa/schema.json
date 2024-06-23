@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visota_vorsas",
+  "info": {
+    "singularName": "visota-vorsa",
+    "pluralName": "visota-vorsas",
+    "displayName": "Высота ворса",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "tovaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "visota_vorsa"
+    }
+  }
+}

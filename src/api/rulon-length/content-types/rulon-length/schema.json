@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rulon_lengths",
+  "info": {
+    "singularName": "rulon-length",
+    "pluralName": "rulon-lengths",
+    "displayName": "Rulon_length"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Value": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    }
+  }
+}

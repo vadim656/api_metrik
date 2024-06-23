@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class-p",
     "pluralName": "class-ps",
-    "displayName": "Class_P"
+    "displayName": "Class_P",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

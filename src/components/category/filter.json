@@ -2,34 +2,17 @@
   "collectionName": "components_category_filters",
   "info": {
     "displayName": "Filter",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "brands": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::brand.brand"
+    "Name": {
+      "type": "string"
     },
-    "class_hs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::class-h.class-h"
-    },
-    "class_ps": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::class-p.class-p"
-    },
-    "collection": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::collection.collection"
-    },
-    "countries": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::country.country"
+    "Visible": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

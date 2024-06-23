@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formats",
+  "info": {
+    "singularName": "format",
+    "pluralName": "formats",
+    "displayName": "Format"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "formats"
+    }
+  }
+}

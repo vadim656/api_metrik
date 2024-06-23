@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_pozhars",
+  "info": {
+    "singularName": "class-pozhar",
+    "pluralName": "class-pozhars",
+    "displayName": "Класс пожарной",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "klass_pozharnoj"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "color_spectrums",
+  "info": {
+    "singularName": "color-spectrum",
+    "pluralName": "color-spectrums",
+    "displayName": "Color-spectrum"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "color_spectrums"
+    }
+  }
+}

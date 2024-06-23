@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faskas",
+  "info": {
+    "singularName": "faska",
+    "pluralName": "faskas",
+    "displayName": "Фаска",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "faska"
+    },
+    "calc_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calc-type.calc-type",
+      "inversedBy": "faskas"
+    }
+  }
+}

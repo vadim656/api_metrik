@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zashitniy_sloys",
+  "info": {
+    "singularName": "zashitniy-sloy",
+    "pluralName": "zashitniy-sloys",
+    "displayName": "Защитный слой",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "zashitniy_sloy"
+    }
+  }
+}

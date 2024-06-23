@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_product_slicings",
+  "info": {
+    "displayName": "Slicing"
+  },
+  "options": {},
+  "attributes": {
+    "rulon_slicing": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rulon-slicing.rulon-slicing"
+    },
+    "Price": {
+      "type": "decimal"
+    }
+  }
+}

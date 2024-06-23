@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wood_types",
+  "info": {
+    "singularName": "wood-type",
+    "pluralName": "wood-types",
+    "displayName": "Wood-type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "wood_types"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destination_materials",
+  "info": {
+    "singularName": "destination-material",
+    "pluralName": "destination-materials",
+    "displayName": "Destination-material"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "destination_materials"
+    }
+  }
+}

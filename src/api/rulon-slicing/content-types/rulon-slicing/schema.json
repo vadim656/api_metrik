@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rulon_slicings",
+  "info": {
+    "singularName": "rulon-slicing",
+    "pluralName": "rulon-slicings",
+    "displayName": "Rulon_slicing"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Value": {
+      "type": "decimal"
+    }
+  }
+}

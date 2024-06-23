@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_product_product_variables",
+  "info": {
+    "displayName": "Product_variables",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "drawing": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "length": {
+      "type": "integer"
+    },
+    "cut": {
+      "type": "boolean",
+      "default": true
+    },
+    "rulon_width": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rulon-width.rulon-width"
+    },
+    "rulon_length": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rulon-length.rulon-length"
+    }
+  }
+}

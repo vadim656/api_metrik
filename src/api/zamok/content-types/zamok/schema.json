@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zamoks",
+  "info": {
+    "singularName": "zamok",
+    "pluralName": "zamoks",
+    "displayName": "Замок",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

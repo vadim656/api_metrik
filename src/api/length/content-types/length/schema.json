@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lengths",
+  "info": {
+    "singularName": "length",
+    "pluralName": "lengths",
+    "displayName": "Length"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "decimal"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "length"
+    }
+  }
+}

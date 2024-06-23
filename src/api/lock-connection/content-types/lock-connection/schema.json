@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lock_connections",
+  "info": {
+    "singularName": "lock-connection",
+    "pluralName": "lock-connections",
+    "displayName": "Lock connection"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "lock_connections"
+    }
+  }
+}

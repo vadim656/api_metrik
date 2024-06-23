@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class-h",
     "pluralName": "class-hs",
-    "displayName": "Class_H"
+    "displayName": "Class_H",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cart_samovivozs",
+  "info": {
+    "displayName": "samovivoz"
+  },
+  "options": {},
+  "attributes": {
+    "Adress": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

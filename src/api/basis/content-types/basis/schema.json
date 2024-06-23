@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bases",
+  "info": {
+    "singularName": "basis",
+    "pluralName": "bases",
+    "displayName": "Basis"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "prtoducts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "bases"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ob_toshinas",
+  "info": {
+    "singularName": "ob-toshina",
+    "pluralName": "ob-toshinas",
+    "displayName": "Общая толщина",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "obshhaya_tolshhina"
+    },
+    "Name": {
+      "type": "decimal"
+    }
+  }
+}

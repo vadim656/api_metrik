@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shirinas",
+  "info": {
+    "singularName": "shirina",
+    "pluralName": "shirinas",
+    "displayName": "Ширина",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "decimal"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "shirina"
+    },
+    "calc_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calc-type.calc-type",
+      "inversedBy": "shirinas"
+    }
+  }
+}

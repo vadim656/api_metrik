@@ -7,21 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "Calc_type": {
-      "type": "string"
-    },
-    "Class_pozhar": {
-      "type": "string"
-    },
-    "Color": {
-      "type": "string"
-    },
-    "Namotka_n": {
-      "type": "string"
-    },
-    "Ob_toshina": {
-      "type": "string"
-    },
     "Overlock": {
       "type": "boolean",
       "default": false
@@ -35,23 +20,11 @@
     "Step_type": {
       "type": "string"
     },
-    "Zashitniy_sloy": {
-      "type": "string"
-    },
-    "Vlagostoikost": {
-      "type": "string"
-    },
-    "Visota_Vorsa": {
-      "type": "decimal"
-    },
     "Dlinna_doski": {
       "type": "integer"
     },
     "Dosok_v_upakovke": {
       "type": "integer"
-    },
-    "Zamok": {
-      "type": "string"
     },
     "Construkciya": {
       "type": "string"
@@ -71,16 +44,10 @@
     "Tip_risunka": {
       "type": "string"
     },
-    "Faska": {
-      "type": "string"
-    },
     "Col_m2": {
       "type": "decimal"
     },
     "Pazmer_mm": {
-      "type": "string"
-    },
-    "Tolshina_doski": {
       "type": "string"
     },
     "Shirina_doski": {

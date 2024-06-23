@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calc_types",
+  "info": {
+    "singularName": "calc-type",
+    "pluralName": "calc-types",
+    "displayName": "Calc_type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "calc_type"
+    },
+    "faskas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::faska.faska",
+      "mappedBy": "calc_types"
+    },
+    "shirinas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::shirina.shirina",
+      "mappedBy": "calc_types"
+    }
+  }
+}

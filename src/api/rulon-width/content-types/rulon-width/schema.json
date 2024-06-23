@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rulon_widths",
+  "info": {
+    "singularName": "rulon-width",
+    "pluralName": "rulon-widths",
+    "displayName": "Rulon_width"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Value": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    }
+  }
+}

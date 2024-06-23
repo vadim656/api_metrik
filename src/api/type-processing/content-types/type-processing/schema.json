@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_processings",
+  "info": {
+    "singularName": "type-processing",
+    "pluralName": "type-processings",
+    "displayName": "Type-processing"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "type_processings"
+    }
+  }
+}

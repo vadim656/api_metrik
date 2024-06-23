@@ -1,0 +1,17 @@
+GET http://localhost:8001/api/parser
+Accept: application/json
+
+
+###
+GET http://localhost:8001/api/parser-update
+Accept: application/json
+
+
+###
+GET http://localhost:8001/api/delete-all
+Accept: application/json
+
+###
+
+
+

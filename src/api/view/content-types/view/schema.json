@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "views",
+  "info": {
+    "singularName": "view",
+    "pluralName": "views",
+    "displayName": "View"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "views"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings_carts",
+  "info": {
+    "singularName": "settings-cart",
+    "pluralName": "settings-carts",
+    "displayName": "SettingsCart"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "samovivoz": {
+      "displayName": "samovivoz",
+      "type": "component",
+      "repeatable": true,
+      "component": "cart.samovivoz"
+    }
+  }
+}
