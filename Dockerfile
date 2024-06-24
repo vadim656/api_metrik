@@ -18,5 +18,5 @@ USER root
 RUN chown -R node:node /opt/app/.strapi
 USER node
 RUN yarn build
-EXPOSE 8001
+EXPOSE 8021
 CMD ["yarn", "develop"]
