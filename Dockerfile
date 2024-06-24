@@ -12,11 +12,11 @@ RUN yarn config set network-timeout 600000 -g
 USER node
 RUN yarn install
 RUN mkdir /opt/app
+RUN chown  node:node /opt/app
 WORKDIR /opt/app
 COPY ./ .
 USER root
-RUN chown -R node:node /opt/app/.strapi
-RUN chown -R node:node /opt/app/public/uploads
+RUN chmod 777 -R ./public/uploads
 USER node
 RUN yarn build
 EXPOSE 8021
