@@ -16,6 +16,7 @@ WORKDIR /opt/app
 COPY ./ .
 USER root
 RUN chown -R node:node /opt/app/.strapi
+RUN chmod -R node:node /opt/app/public
 USER node
 RUN yarn build
 EXPOSE 8021
