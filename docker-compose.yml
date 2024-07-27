@@ -27,6 +27,7 @@ services:
       - ./public:/opt/app/public
     ports:
       - '8021:8021'
+      - '9000:9000'
     networks:
       - strapi
     depends_on:
