@@ -35,7 +35,9 @@
     "uuid": "^10.0.0",
     "xml2js": "^0.6.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+
+  },
   "engines": {
     "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"

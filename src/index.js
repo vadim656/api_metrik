@@ -7,7 +7,8 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register(/*{ strapi }*/) {
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
@@ -16,5 +17,17 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({strapi}) {
+    const updateFilter = require('./utils/updateFilter');
+
+    strapi.db.lifecycles.subscribe({
+      models: ['api::product.product'],
+      async beforeCreate(event) {
+        updateFilter(event.params.data.id)
+      },
+      async afterUpdate(event) {
+        updateFilter(event.params.data.id)
+      },
+    });
+  },
 };

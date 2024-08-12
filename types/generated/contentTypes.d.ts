@@ -1047,6 +1047,8 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::category.category'
     >;
     id_parser: Attribute.String;
+    Min_price: Attribute.Integer;
+    Max_price: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

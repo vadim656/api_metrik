@@ -39,6 +39,12 @@
     },
     "id_parser": {
       "type": "string"
+    },
+    "Min_price": {
+      "type": "integer"
+    },
+    "Max_price": {
+      "type": "integer"
     }
   }
 }
