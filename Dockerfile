@@ -15,7 +15,7 @@ RUN mkdir /opt/app
 WORKDIR /opt/app
 COPY ./ .
 USER root
-RUN chown -R node:node /opt/app/.strapi
+RUN  chown -R node:node /opt/app/.strapi
 USER node
 RUN yarn build
 EXPOSE 8021

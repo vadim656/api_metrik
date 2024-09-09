@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filters",
+  "info": {
+    "singularName": "filter",
+    "pluralName": "filters",
+    "displayName": "Filter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UUID": {
+      "type": "uid"
+    },
+    "kategorii": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category",
+      "inversedBy": "filter"
+    },
+    "brands": {
+      "type": "boolean"
+    },
+    "classHs": {
+      "type": "boolean"
+    },
+    "classPozhars": {
+      "type": "boolean"
+    },
+    "classPs": {
+      "type": "boolean"
+    },
+    "colors": {
+      "type": "boolean"
+    },
+    "countries": {
+      "type": "boolean"
+    },
+    "vlagostojkosts": {
+      "type": "boolean"
+    },
+    "namotkaNs": {
+      "type": "boolean"
+    },
+    "obToshinas": {
+      "type": "boolean"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "proizvoditels": {
+      "type": "boolean"
+    },
+    "shirinas": {
+      "type": "boolean"
+    },
+    "vysota_vorsas": {
+      "type": "boolean"
+    },
+    "zamoks": {
+      "type": "boolean"
+    },
+    "zashhitnyj_slojs": {
+      "type": "boolean"
+    }
+  }
+}

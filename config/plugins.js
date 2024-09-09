@@ -1,4 +1,5 @@
 module.exports = ({ env }) => ({
+  // 'medusa-plugin-strapi-ts': true,
   graphql: {
     enabled: true,
     config: {

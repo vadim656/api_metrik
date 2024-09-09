@@ -1047,8 +1047,29 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::category.category'
     >;
     id_parser: Attribute.String;
-    Min_price: Attribute.Integer;
-    Max_price: Attribute.Integer;
+    minprice: Attribute.Integer;
+    maxprice: Attribute.Integer;
+    child: Attribute.Relation<
+      'api::category.category',
+      'oneToMany',
+      'api::category.category'
+    >;
+    top_category: Attribute.Relation<
+      'api::category.category',
+      'manyToOne',
+      'api::category.category'
+    >;
+    filter: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'api::filter.filter'
+    >;
+    filter_cat: Attribute.JSON;
+    tovaries: Attribute.Relation<
+      'api::category.category',
+      'oneToMany',
+      'api::product.product'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1487,6 +1508,56 @@ export interface ApiFaskaFaska extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::faska.faska',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFilterFilter extends Schema.CollectionType {
+  collectionName: 'filters';
+  info: {
+    singularName: 'filter';
+    pluralName: 'filters';
+    displayName: 'Filter';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    UUID: Attribute.UID;
+    kategorii: Attribute.Relation<
+      'api::filter.filter',
+      'oneToOne',
+      'api::category.category'
+    >;
+    brands: Attribute.Boolean;
+    classHs: Attribute.Boolean;
+    classPozhars: Attribute.Boolean;
+    classPs: Attribute.Boolean;
+    colors: Attribute.Boolean;
+    countries: Attribute.Boolean;
+    vlagostojkosts: Attribute.Boolean;
+    namotkaNs: Attribute.Boolean;
+    obToshinas: Attribute.Boolean;
+    Name: Attribute.String;
+    proizvoditels: Attribute.Boolean;
+    shirinas: Attribute.Boolean;
+    vysota_vorsas: Attribute.Boolean;
+    zamoks: Attribute.Boolean;
+    zashhitnyj_slojs: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::filter.filter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::filter.filter',
       'oneToOne',
       'admin::user'
     > &
@@ -2124,6 +2195,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
     >;
     ART: Attribute.String;
     id_parser: Attribute.String;
+    parent_category: Attribute.Relation<
+      'api::product.product',
+      'manyToOne',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -2835,6 +2911,7 @@ declare module '@strapi/types' {
       'api::destination-material.destination-material': ApiDestinationMaterialDestinationMaterial;
       'api::dimension.dimension': ApiDimensionDimension;
       'api::faska.faska': ApiFaskaFaska;
+      'api::filter.filter': ApiFilterFilter;
       'api::form.form': ApiFormForm;
       'api::format.format': ApiFormatFormat;
       'api::gloss-level.gloss-level': ApiGlossLevelGlossLevel;

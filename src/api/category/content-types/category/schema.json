@@ -40,11 +40,38 @@
     "id_parser": {
       "type": "string"
     },
-    "Min_price": {
+    "minprice": {
       "type": "integer"
     },
-    "Max_price": {
+    "maxprice": {
       "type": "integer"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "top_category"
+    },
+    "top_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "child"
+    },
+    "filter": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::filter.filter",
+      "mappedBy": "kategorii"
+    },
+    "filter_cat": {
+      "type": "json"
+    },
+    "tovaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "parent_category"
     }
   }
 }

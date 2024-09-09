@@ -307,6 +307,12 @@
     },
     "id_parser": {
       "type": "string"
+    },
+    "parent_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "tovaries"
     }
   }
 }
