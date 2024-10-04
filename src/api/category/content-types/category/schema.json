@@ -72,6 +72,10 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "parent_category"
+    },
+    "Position": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
