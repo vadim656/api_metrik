@@ -277,10 +277,12 @@ async function setFilter(_id) {
 
     const w = combineValues(allProducts.flat())
     if(topCat) {
-      await strapi.entityService.update('api::category.category', topCat, {
+      await strapi.documents('api::category.category').update({
+        documentId: "__TODO__",
+
         data: {
           filter_cat: w,
-        },
+        }
       });
     }
 

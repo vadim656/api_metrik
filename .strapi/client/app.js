@@ -3,7 +3,6 @@
  * Any modifications made will be discarded.
  */
 import graphql from "@strapi/plugin-graphql/strapi-admin";
-import i18N from "@strapi/plugin-i18n/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import strapiAdvancedUuid from "strapi-advanced-uuid/strapi-admin";
 import importExportEntries from "strapi-plugin-import-export-entries/strapi-admin";
@@ -18,7 +17,6 @@ renderAdmin(document.getElementById("strapi"), {
 
   plugins: {
     graphql: graphql,
-    i18n: i18N,
     "users-permissions": usersPermissions,
     "strapi-advanced-uuid": strapiAdvancedUuid,
     "import-export-entries": importExportEntries,

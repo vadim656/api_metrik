@@ -10776,7 +10776,7 @@ function searchParams(name, value, type = null, data) {
 
 async function parse(data) {
 
-  return await strapi.entityService.create('api::product.product', {
+  return await strapi.documents('api::product.product').create({
     data: {
       Name: data.name,
       Desc: data.description,

@@ -57,11 +57,13 @@ module.exports = {
         if(args.idCat) {
 
           try {
-            const entry = await strapi.entityService.update('api::category.category', args.idCat, {
+            const entry = await strapi.documents('api::category.category').update({
+              documentId: "__TODO__",
+
               data: {
                 minprice: args.prices_min,
                 maxprice: args.prices_max,
-              },
+              }
             });
 
           } catch (e) {

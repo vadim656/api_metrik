@@ -147,7 +147,7 @@ module.exports = {
       const bytesToKbytes = (bytes) => Math.round((bytes / 1024) * 100) / 100;
       const direc = () =>
         fse.mkdtemp(path.join(os.tmpdir(), "strapi-upload-"));
-      const config = strapi.config.get("plugin.upload");
+      const config = strapi.config.get("plugin::upload");
       const name = uuidv4();
 
       const entity = {
