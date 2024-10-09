@@ -6,68 +6,68 @@ module.exports = ({ env }) => ({
       playgroundAlways: true,
     },
   },
-  'import-export-entries': {
-    enabled: true,
-    config: {
-      // See `Config` section.
-    },
-  },
-  "fuzzy-search": {
-    enabled: true,
-    config: {
-      contentTypes: [
-        {
-          uid: "api::product.product",
-          modelName: "product",
-          transliterate: true,
-          fuzzysortOptions: {
-            characterLimit: 300,
-            threshold: -600,
-            limit: 6,
-            keys: [
-              {
-                name: "Name",
-                weight: 100,
-              },
-            ],
-          },
-        },
-        {
-          uid: "api::category.category",
-          modelName: "category",
-          fuzzysortOptions: {
-            characterLimit: 500,
-            threshold: -600,
-            limit: 3,
-            keys: [
-              {
-                name: "Name",
-                weight: 200,
-              },
-            ],
-          },
-        },
-      ],
-    },
-  },
-  "rest-cache": {
-    enabled: false,
-    config: {
-      provider: {
-        name: "memory",
-        options: {
-          max: 32767,
-          maxAge: 3600,
-        },
-      },
-      strategy: {
-        contentTypes: [
-          // list of Content-Types UID to cache
-          "api::category.category",
-        ],
-      },
-    },
-  },
+  // 'import-export-entries': {
+  //   enabled: true,
+  //   config: {
+  //     // See `Config` section.
+  //   },
+  // },
+  // "fuzzy-search": {
+  //   enabled: true,
+  //   config: {
+  //     contentTypes: [
+  //       {
+  //         uid: "api::product.product",
+  //         modelName: "product",
+  //         transliterate: true,
+  //         fuzzysortOptions: {
+  //           characterLimit: 300,
+  //           threshold: -600,
+  //           limit: 6,
+  //           keys: [
+  //             {
+  //               name: "Name",
+  //               weight: 100,
+  //             },
+  //           ],
+  //         },
+  //       },
+  //       {
+  //         uid: "api::category.category",
+  //         modelName: "category",
+  //         fuzzysortOptions: {
+  //           characterLimit: 500,
+  //           threshold: -600,
+  //           limit: 3,
+  //           keys: [
+  //             {
+  //               name: "Name",
+  //               weight: 200,
+  //             },
+  //           ],
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
+  // "rest-cache": {
+  //   enabled: false,
+  //   config: {
+  //     provider: {
+  //       name: "memory",
+  //       options: {
+  //         max: 32767,
+  //         maxAge: 3600,
+  //       },
+  //     },
+  //     strategy: {
+  //       contentTypes: [
+  //         // list of Content-Types UID to cache
+  //         "api::category.category",
+  //       ],
+  //     },
+  //   },
+  // },
   upload: {
     config: {
       provider: "local",

@@ -1,62 +1,55 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ProductSlicing extends Schema.Component {
+export interface ProductSlicing extends Struct.ComponentSchema {
   collectionName: 'components_product_slicings';
   info: {
     displayName: 'Slicing';
   };
   attributes: {
-    rulon_slicing: Attribute.Relation<
-      'product.slicing',
+    rulon_slicing: Schema.Attribute.Relation<
       'oneToOne',
       'api::rulon-slicing.rulon-slicing'
     >;
-    Price: Attribute.Decimal;
+    Price: Schema.Attribute.Decimal;
   };
 }
 
-export interface ProductProductVariables extends Schema.Component {
+export interface ProductProductVariables extends Struct.ComponentSchema {
   collectionName: 'components_product_product_variables';
   info: {
     displayName: 'Product_variables';
     description: '';
   };
   attributes: {
-    width: Attribute.Decimal;
-    price: Attribute.Integer;
-    drawing: Attribute.String;
-    img: Attribute.Media<'images', true>;
-    length: Attribute.Integer;
-    cut: Attribute.Boolean & Attribute.DefaultTo<true>;
-    rulon_width: Attribute.Relation<
-      'product.product-variables',
+    width: Schema.Attribute.Decimal;
+    price: Schema.Attribute.Integer;
+    drawing: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images', true>;
+    length: Schema.Attribute.Integer;
+    cut: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    rulon_width: Schema.Attribute.Relation<
       'oneToOne',
       'api::rulon-width.rulon-width'
     >;
-    rulon_length: Attribute.Relation<
-      'product.product-variables',
+    rulon_length: Schema.Attribute.Relation<
       'oneToOne',
       'api::rulon-length.rulon-length'
     >;
   };
 }
 
-export interface OrderProductOrderProduct extends Schema.Component {
+export interface OrderProductOrderProduct extends Struct.ComponentSchema {
   collectionName: 'components_order_product_order_products';
   info: {
     displayName: 'Order_product';
   };
   attributes: {
-    product: Attribute.Relation<
-      'order-product.order-product',
-      'oneToOne',
-      'api::product.product'
-    >;
-    Value: Attribute.Integer;
+    product: Schema.Attribute.Relation<'oneToOne', 'api::product.product'>;
+    Value: Schema.Attribute.Integer;
   };
 }
 
-export interface CategoryFilter extends Schema.Component {
+export interface CategoryFilter extends Struct.ComponentSchema {
   collectionName: 'components_category_filters';
   info: {
     displayName: 'Filter';
@@ -64,58 +57,41 @@ export interface CategoryFilter extends Schema.Component {
     description: '';
   };
   attributes: {
-    Name: Attribute.String;
-    Visible: Attribute.Boolean & Attribute.DefaultTo<true>;
+    Name: Schema.Attribute.String;
+    Visible: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
   };
 }
 
-export interface CategoryFilterItem extends Schema.Component {
+export interface CategoryFilterItem extends Struct.ComponentSchema {
   collectionName: 'components_category_filter_items';
   info: {
     displayName: 'Filter-item';
   };
   attributes: {
-    Name: Attribute.String;
-    brands: Attribute.Relation<
-      'category.filter-item',
-      'oneToMany',
-      'api::brand.brand'
-    >;
-    class_hs: Attribute.Relation<
-      'category.filter-item',
-      'oneToMany',
-      'api::class-h.class-h'
-    >;
-    class_ps: Attribute.Relation<
-      'category.filter-item',
-      'oneToMany',
-      'api::class-p.class-p'
-    >;
-    collections: Attribute.Relation<
-      'category.filter-item',
+    Name: Schema.Attribute.String;
+    brands: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
+    class_hs: Schema.Attribute.Relation<'oneToMany', 'api::class-h.class-h'>;
+    class_ps: Schema.Attribute.Relation<'oneToMany', 'api::class-p.class-p'>;
+    collections: Schema.Attribute.Relation<
       'oneToMany',
       'api::collection.collection'
     >;
-    countries: Attribute.Relation<
-      'category.filter-item',
-      'oneToMany',
-      'api::country.country'
-    >;
+    countries: Schema.Attribute.Relation<'oneToMany', 'api::country.country'>;
   };
 }
 
-export interface CartSamovivoz extends Schema.Component {
+export interface CartSamovivoz extends Struct.ComponentSchema {
   collectionName: 'components_cart_samovivozs';
   info: {
     displayName: 'samovivoz';
   };
   attributes: {
-    Adress: Attribute.String;
-    Active: Attribute.Boolean & Attribute.DefaultTo<true>;
+    Adress: Schema.Attribute.String;
+    Active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
   };
 }
 
-export interface AttributesAttributes extends Schema.Component {
+export interface AttributesAttributes extends Struct.ComponentSchema {
   collectionName: 'components_attributes_attributes';
   info: {
     displayName: 'Attributes';
@@ -123,27 +99,27 @@ export interface AttributesAttributes extends Schema.Component {
     description: '';
   };
   attributes: {
-    Overlock: Attribute.Boolean & Attribute.DefaultTo<false>;
-    Price_m2: Attribute.Decimal;
-    Shirina_v2: Attribute.String;
-    Step_type: Attribute.String;
-    Dlinna_doski: Attribute.Integer;
-    Dosok_v_upakovke: Attribute.Integer;
-    Construkciya: Attribute.String;
-    Material_vorsa: Attribute.String;
-    Osnova: Attribute.String;
-    Ottenok: Attribute.String;
-    Poverhnost: Attribute.String;
-    Tip_risunka: Attribute.String;
-    Col_m2: Attribute.Decimal;
-    Pazmer_mm: Attribute.String;
-    Shirina_doski: Attribute.String;
+    Overlock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    Price_m2: Schema.Attribute.Decimal;
+    Shirina_v2: Schema.Attribute.String;
+    Step_type: Schema.Attribute.String;
+    Dlinna_doski: Schema.Attribute.Integer;
+    Dosok_v_upakovke: Schema.Attribute.Integer;
+    Construkciya: Schema.Attribute.String;
+    Material_vorsa: Schema.Attribute.String;
+    Osnova: Schema.Attribute.String;
+    Ottenok: Schema.Attribute.String;
+    Poverhnost: Schema.Attribute.String;
+    Tip_risunka: Schema.Attribute.String;
+    Col_m2: Schema.Attribute.Decimal;
+    Pazmer_mm: Schema.Attribute.String;
+    Shirina_doski: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'product.slicing': ProductSlicing;
       'product.product-variables': ProductProductVariables;
       'order-product.order-product': OrderProductOrderProduct;
