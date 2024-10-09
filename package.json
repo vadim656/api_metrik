@@ -14,10 +14,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.24.7",
-    "@strapi/plugin-i18n": "^4.25.7",
-    "@strapi/plugin-users-permissions": "^4.25.7",
-    "@strapi/strapi": "^4.25.7",
+    "@strapi/plugin-graphql": "^4.25.13",
+    "@strapi/plugin-i18n": "^4.25.13",
+    "@strapi/plugin-users-permissions": "^4.25.13",
+    "@strapi/strapi": "^4.25.13",
     "axios": "^1.7.2",
     "better-sqlite3": "11.0.0",
     "fs-extra": "^11.2.0",
