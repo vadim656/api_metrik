@@ -1071,6 +1071,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::product.product'
     >;
     Position: Attribute.Integer & Attribute.DefaultTo<0>;
+    Enable_start_page: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

@@ -76,6 +76,10 @@
     "Position": {
       "type": "integer",
       "default": 0
+    },
+    "Enable_start_page": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
