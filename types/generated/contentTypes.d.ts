@@ -1321,6 +1321,7 @@ export interface ApiObToshinaObToshina extends Struct.CollectionTypeSchema {
   attributes: {
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     Name: Schema.Attribute.Decimal;
+    Name2: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

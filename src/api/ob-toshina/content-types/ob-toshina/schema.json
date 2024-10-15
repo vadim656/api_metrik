@@ -20,6 +20,10 @@
     },
     "Name": {
       "type": "decimal"
+    },
+    "Name2": {
+      "type": "string",
+      "required": true
     }
   }
 }
