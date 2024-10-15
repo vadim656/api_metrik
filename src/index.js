@@ -21,18 +21,18 @@ module.exports = {
    */
   bootstrap({strapi}) {
     const updateFilter = require('./utils/updateFilter');
-    const setFilter = require('./utils/setFilters');
+    // const setFilter = require('./utils/setFilters');
 
-    async function setAllFilters() {
-      const entries = await strapi.db.query('api::product.product').findMany({
-        select: ['id'],
-      });
-
-      // Работайте последовательно со всеми записями, используя Promise.all
-      const results = await Promise.all(entries.map((entry) => setFilter(entry.id)));
-
-      return results;
-    }
+    // async function setAllFilters() {
+    //   const entries = await strapi.db.query('api::product.product').findMany({
+    //     select: ['id'],
+    //   });
+    //
+    //   // Работайте последовательно со всеми записями, используя Promise.all
+    //   const results = await Promise.all(entries.map((entry) => setFilter(entry.id)));
+    //
+    //   return results;
+    // }
 
     // setAllFilters().then(res => {
     //   console.log('res -> ', res)

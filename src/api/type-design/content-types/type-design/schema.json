@@ -4,10 +4,11 @@
   "info": {
     "singularName": "type-design",
     "pluralName": "type-designs",
-    "displayName": "Type_design"
+    "displayName": "Type_design",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

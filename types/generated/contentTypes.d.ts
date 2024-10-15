@@ -740,7 +740,7 @@ export interface ApiClassPozharClassPozhar extends Struct.CollectionTypeSchema {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Name: Schema.Attribute.String;
@@ -1532,6 +1532,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::category.category'
     >;
+    col_m2: Schema.Attribute.Decimal;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1883,9 +1884,10 @@ export interface ApiTypeDesignTypeDesign extends Struct.CollectionTypeSchema {
     singularName: 'type-design';
     pluralName: 'type-designs';
     displayName: 'Type_design';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Name: Schema.Attribute.String;
