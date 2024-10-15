@@ -1,6 +1,6 @@
 'use strict';
 
-const updateFilter = require("./utils/updateFilter");
+// const updateFilter = require("./utils/updateFilter");
 const setFilter = require("./utils/setFilters");
 module.exports = {
   /**
@@ -20,7 +20,7 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
   bootstrap({strapi}) {
-    const updateFilter = require('./utils/updateFilter');
+    // const updateFilter = require('./utils/updateFilter');
     // const setFilter = require('./utils/setFilters');
 
     // async function setAllFilters() {
@@ -38,40 +38,40 @@ module.exports = {
     //   console.log('res -> ', res)
     // })
 
-    strapi.db.lifecycles.subscribe({
-      models: ['api::product.product'],
-      async beforeCreate(event) {
-        const args = await updateFilter(event.params.data.id)
-      },
-      async afterUpdate(event) {
-        const {result} = event;
-        const args = await updateFilter(result.id)
-        setTimeout(async () => {
-          // await setFilter(result.id)
-          console.log('setFilter -> ', await setFilter(result.id))
+    // strapi.db.lifecycles.subscribe({
+    //   models: ['api::product.product'],
+    //   async beforeCreate(event) {
+    //     const args = await updateFilter(event.params.data.id)
+    //   },
+    //   async afterUpdate(event) {
+    //     const {result} = event;
+    //     const args = await updateFilter(result.id)
+    //     setTimeout(async () => {
+    //       // await setFilter(result.id)
+    //       console.log('setFilter -> ', await setFilter(result.id))
 
-        }, 400)
+    //     }, 400)
 
-        // console.log('entry -> ', filters.length)
-        // console.log('entry -> ', filters)
-        if(args.idCat) {
+    //     // console.log('entry -> ', filters.length)
+    //     // console.log('entry -> ', filters)
+    //     if(args.idCat) {
 
-          try {
-            // const entry = await strapi.documents('api::category.category').update({
-            //   documentId: "__TODO__",
-            //
-            //   data: {
-            //     minprice: args.prices_min,
-            //     maxprice: args.prices_max,
-            //   }
-            // });
+    //       try {
+    //         // const entry = await strapi.documents('api::category.category').update({
+    //         //   documentId: "__TODO__",
+    //         //
+    //         //   data: {
+    //         //     minprice: args.prices_min,
+    //         //     maxprice: args.prices_max,
+    //         //   }
+    //         // });
 
-          } catch (e) {
-            console.log(e)
-          }
-        }
+    //       } catch (e) {
+    //         console.log(e)
+    //       }
+    //     }
 
-      },
-    });
+    //   },
+    // });
   },
 };
