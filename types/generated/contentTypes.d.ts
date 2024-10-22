@@ -50,11 +50,12 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::upload.file'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -100,11 +101,12 @@ export interface PluginUploadFolder extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::upload.folder'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -145,11 +147,12 @@ export interface PluginI18NLocale extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::i18n.locale'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -192,11 +195,12 @@ export interface PluginContentReleasesRelease
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::content-releases.release'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -224,7 +228,7 @@ export interface PluginContentReleasesReleaseAction
       Schema.Attribute.Required;
     contentType: Schema.Attribute.String & Schema.Attribute.Required;
     entryDocumentId: Schema.Attribute.String;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     release: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::content-releases.release'
@@ -240,7 +244,8 @@ export interface PluginContentReleasesReleaseAction
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::content-releases.release-action'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -283,11 +288,12 @@ export interface PluginReviewWorkflowsWorkflow
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::review-workflows.workflow'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -328,11 +334,12 @@ export interface PluginReviewWorkflowsWorkflowStage
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::review-workflows.workflow-stage'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -370,11 +377,12 @@ export interface PluginUsersPermissionsPermission
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -422,11 +430,12 @@ export interface PluginUsersPermissionsRole
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.role'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -477,11 +486,12 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -505,11 +515,12 @@ export interface ApiAbrasionAbrasion extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::abrasion.abrasion'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -533,11 +544,12 @@ export interface ApiAppointmentAppointment extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::appointment.appointment'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -561,8 +573,9 @@ export interface ApiBasisBasis extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::basis.basis'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::basis.basis'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -592,8 +605,9 @@ export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -620,11 +634,12 @@ export interface ApiCalcTypeCalcType extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::calc-type.calc-type'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -665,11 +680,12 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::category.category'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -694,11 +710,12 @@ export interface ApiClassHClassH extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::class-h.class-h'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -723,11 +740,12 @@ export interface ApiClassPClassP extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::class-p.class-p'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -752,11 +770,12 @@ export interface ApiClassPozharClassPozhar extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::class-pozhar.class-pozhar'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -782,11 +801,12 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::collection.collection'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -811,8 +831,9 @@ export interface ApiColorColor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::color.color'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::color.color'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -837,11 +858,12 @@ export interface ApiColorSpectrumColorSpectrum
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::color-spectrum.color-spectrum'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -866,11 +888,12 @@ export interface ApiComponentialityComponentiality
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::componentiality.componentiality'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -895,11 +918,12 @@ export interface ApiConnectionTypeConnectionType
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::connection-type.connection-type'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -924,11 +948,12 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::country.country'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -953,11 +978,12 @@ export interface ApiDestinationMaterialDestinationMaterial
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::destination-material.destination-material'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -981,11 +1007,12 @@ export interface ApiDimensionDimension extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::dimension.dimension'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1014,8 +1041,9 @@ export interface ApiFaskaFaska extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faska.faska'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faska.faska'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1055,8 +1083,12 @@ export interface ApiFilterFilter extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::filter.filter'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::filter.filter'
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1080,8 +1112,9 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1105,8 +1138,12 @@ export interface ApiFormatFormat extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::format.format'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::format.format'
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1130,11 +1167,12 @@ export interface ApiGlossLevelGlossLevel extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::gloss-level.gloss-level'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1158,11 +1196,12 @@ export interface ApiInvoiceInvoice extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::invoice.invoice'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1186,8 +1225,12 @@ export interface ApiLengthLength extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::length.length'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::length.length'
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1212,11 +1255,12 @@ export interface ApiLockConnectionLockConnection
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::lock-connection.lock-connection'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1242,11 +1286,12 @@ export interface ApiManufacturerManufacturer
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::manufacturer.manufacturer'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1270,11 +1315,12 @@ export interface ApiMaterialMaterial extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::material.material'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1299,11 +1345,12 @@ export interface ApiNamotkaNNamotkaN extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::namotka-n.namotka-n'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1329,11 +1376,12 @@ export interface ApiObToshinaObToshina extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ob-toshina.ob-toshina'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1362,8 +1410,9 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1387,11 +1436,12 @@ export interface ApiPackagePackage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::package.package'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1541,11 +1591,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1569,11 +1620,12 @@ export interface ApiPropertiePropertie extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::propertie.propertie'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1597,8 +1649,9 @@ export interface ApiRoomRoom extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::room.room'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::room.room'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1628,11 +1681,12 @@ export interface ApiRulonLengthRulonLength extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::rulon-length.rulon-length'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1656,11 +1710,12 @@ export interface ApiRulonSlicingRulonSlicing
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::rulon-slicing.rulon-slicing'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1690,11 +1745,12 @@ export interface ApiRulonWidthRulonWidth extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::rulon-width.rulon-width'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1728,11 +1784,12 @@ export interface ApiSettingRulonSettingRulon extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::setting-rulon.setting-rulon'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1755,11 +1812,12 @@ export interface ApiSettingsCartSettingsCart extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::settings-cart.settings-cart'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1785,11 +1843,12 @@ export interface ApiSettingsProductSettingsProduct
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::settings-product.settings-product'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1818,11 +1877,12 @@ export interface ApiShirinaShirina extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::shirina.shirina'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1846,11 +1906,12 @@ export interface ApiSurfaceSurface extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::surface.surface'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1874,8 +1935,9 @@ export interface ApiTypeType extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::type.type'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::type.type'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1900,11 +1962,12 @@ export interface ApiTypeDesignTypeDesign extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::type-design.type-design'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1929,11 +1992,12 @@ export interface ApiTypeProcessingTypeProcessing
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::type-processing.type-processing'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1957,8 +2021,9 @@ export interface ApiViewView extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::view.view'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::view.view'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1983,11 +2048,12 @@ export interface ApiVisotaVorsaVisotaVorsa extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::visota-vorsa.visota-vorsa'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2013,11 +2079,12 @@ export interface ApiVlagostoikostVlagostoikost
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::vlagostoikost.vlagostoikost'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2041,8 +2108,12 @@ export interface ApiWeightWeight extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::weight.weight'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::weight.weight'
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2066,11 +2137,12 @@ export interface ApiWoodTypeWoodType extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::wood-type.wood-type'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2094,8 +2166,9 @@ export interface ApiZamokZamok extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::zamok.zamok'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::zamok.zamok'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2121,11 +2194,12 @@ export interface ApiZashitniySloyZashitniySloy
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::zashitniy-sloy.zashitniy-sloy'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2170,8 +2244,9 @@ export interface AdminPermission extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::permission'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::permission'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2235,8 +2310,9 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::user'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2283,8 +2359,9 @@ export interface AdminRole extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::role'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::role'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2342,8 +2419,9 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::api-token'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::api-token'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2381,11 +2459,12 @@ export interface AdminApiTokenPermission extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::api-token-permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2440,11 +2519,12 @@ export interface AdminTransferToken extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::transfer-token'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
@@ -2483,11 +2563,12 @@ export interface AdminTransferTokenPermission
       Schema.Attribute.Private;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'admin::transfer-token-permission'
-    >;
+    > &
+      Schema.Attribute.Private;
   };
 }
 
