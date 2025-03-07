@@ -1,40 +1,70 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface ProductSlicing extends Struct.ComponentSchema {
-  collectionName: 'components_product_slicings';
+export interface AttributesAttributes extends Struct.ComponentSchema {
+  collectionName: 'components_attributes_attributes';
   info: {
-    displayName: 'Slicing';
+    description: '';
+    displayName: 'Attributes';
+    icon: 'bulletList';
   };
   attributes: {
-    rulon_slicing: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::rulon-slicing.rulon-slicing'
-    >;
-    Price: Schema.Attribute.Decimal;
+    Col_m2: Schema.Attribute.Decimal;
+    Construkciya: Schema.Attribute.String;
+    Dlinna_doski: Schema.Attribute.Integer;
+    Dosok_v_upakovke: Schema.Attribute.Integer;
+    Material_vorsa: Schema.Attribute.String;
+    Osnova: Schema.Attribute.String;
+    Ottenok: Schema.Attribute.String;
+    Overlock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    Pazmer_mm: Schema.Attribute.String;
+    Poverhnost: Schema.Attribute.String;
+    Price_m2: Schema.Attribute.Decimal;
+    Shirina_doski: Schema.Attribute.String;
+    Shirina_v2: Schema.Attribute.String;
+    Step_type: Schema.Attribute.String;
+    Tip_risunka: Schema.Attribute.String;
   };
 }
 
-export interface ProductProductVariables extends Struct.ComponentSchema {
-  collectionName: 'components_product_product_variables';
+export interface CartSamovivoz extends Struct.ComponentSchema {
+  collectionName: 'components_cart_samovivozs';
   info: {
-    displayName: 'Product_variables';
-    description: '';
+    displayName: 'samovivoz';
   };
   attributes: {
-    width: Schema.Attribute.Decimal;
-    price: Schema.Attribute.Integer;
-    drawing: Schema.Attribute.String;
-    img: Schema.Attribute.Media<'images', true>;
-    length: Schema.Attribute.Integer;
-    cut: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    rulon_width: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::rulon-width.rulon-width'
+    Active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    Adress: Schema.Attribute.String;
+  };
+}
+
+export interface CategoryFilter extends Struct.ComponentSchema {
+  collectionName: 'components_category_filters';
+  info: {
+    description: '';
+    displayName: 'Filter';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    Visible: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface CategoryFilterItem extends Struct.ComponentSchema {
+  collectionName: 'components_category_filter_items';
+  info: {
+    displayName: 'Filter-item';
+  };
+  attributes: {
+    brands: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
+    class_hs: Schema.Attribute.Relation<'oneToMany', 'api::class-h.class-h'>;
+    class_ps: Schema.Attribute.Relation<'oneToMany', 'api::class-p.class-p'>;
+    collections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collection.collection'
     >;
-    rulon_length: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::rulon-length.rulon-length'
-    >;
+    countries: Schema.Attribute.Relation<'oneToMany', 'api::country.country'>;
+    Name: Schema.Attribute.String;
   };
 }
 
@@ -49,84 +79,54 @@ export interface OrderProductOrderProduct extends Struct.ComponentSchema {
   };
 }
 
-export interface CategoryFilter extends Struct.ComponentSchema {
-  collectionName: 'components_category_filters';
+export interface ProductProductVariables extends Struct.ComponentSchema {
+  collectionName: 'components_product_product_variables';
   info: {
-    displayName: 'Filter';
-    icon: 'bulletList';
     description: '';
+    displayName: 'Product_variables';
   };
   attributes: {
-    Name: Schema.Attribute.String;
-    Visible: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-  };
-}
-
-export interface CategoryFilterItem extends Struct.ComponentSchema {
-  collectionName: 'components_category_filter_items';
-  info: {
-    displayName: 'Filter-item';
-  };
-  attributes: {
-    Name: Schema.Attribute.String;
-    brands: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
-    class_hs: Schema.Attribute.Relation<'oneToMany', 'api::class-h.class-h'>;
-    class_ps: Schema.Attribute.Relation<'oneToMany', 'api::class-p.class-p'>;
-    collections: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::collection.collection'
+    cut: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    drawing: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images', true>;
+    length: Schema.Attribute.Integer;
+    price: Schema.Attribute.Integer;
+    rulon_length: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::rulon-length.rulon-length'
     >;
-    countries: Schema.Attribute.Relation<'oneToMany', 'api::country.country'>;
+    rulon_width: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::rulon-width.rulon-width'
+    >;
+    width: Schema.Attribute.Decimal;
   };
 }
 
-export interface CartSamovivoz extends Struct.ComponentSchema {
-  collectionName: 'components_cart_samovivozs';
+export interface ProductSlicing extends Struct.ComponentSchema {
+  collectionName: 'components_product_slicings';
   info: {
-    displayName: 'samovivoz';
+    displayName: 'Slicing';
   };
   attributes: {
-    Adress: Schema.Attribute.String;
-    Active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-  };
-}
-
-export interface AttributesAttributes extends Struct.ComponentSchema {
-  collectionName: 'components_attributes_attributes';
-  info: {
-    displayName: 'Attributes';
-    icon: 'bulletList';
-    description: '';
-  };
-  attributes: {
-    Overlock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    Price_m2: Schema.Attribute.Decimal;
-    Shirina_v2: Schema.Attribute.String;
-    Step_type: Schema.Attribute.String;
-    Dlinna_doski: Schema.Attribute.Integer;
-    Dosok_v_upakovke: Schema.Attribute.Integer;
-    Construkciya: Schema.Attribute.String;
-    Material_vorsa: Schema.Attribute.String;
-    Osnova: Schema.Attribute.String;
-    Ottenok: Schema.Attribute.String;
-    Poverhnost: Schema.Attribute.String;
-    Tip_risunka: Schema.Attribute.String;
-    Col_m2: Schema.Attribute.Decimal;
-    Pazmer_mm: Schema.Attribute.String;
-    Shirina_doski: Schema.Attribute.String;
+    Price: Schema.Attribute.Decimal;
+    rulon_slicing: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::rulon-slicing.rulon-slicing'
+    >;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'product.slicing': ProductSlicing;
-      'product.product-variables': ProductProductVariables;
-      'order-product.order-product': OrderProductOrderProduct;
+      'attributes.attributes': AttributesAttributes;
+      'cart.samovivoz': CartSamovivoz;
       'category.filter': CategoryFilter;
       'category.filter-item': CategoryFilterItem;
-      'cart.samovivoz': CartSamovivoz;
-      'attributes.attributes': AttributesAttributes;
+      'order-product.order-product': OrderProductOrderProduct;
+      'product.product-variables': ProductProductVariables;
+      'product.slicing': ProductSlicing;
     }
   }
 }

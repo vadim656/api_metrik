@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@strapi/helper-plugin": "^4.25.12",
-    "@strapi/plugin-graphql": "^5.1.0",
-    "@strapi/plugin-users-permissions": "^5.1.0",
-    "@strapi/strapi": "^5.1.0",
+    "@strapi/plugin-graphql": "^5.11.0",
+    "@strapi/plugin-users-permissions": "^5.11.0",
+    "@strapi/strapi": "^5.11.0",
     "axios": "^1.7.2",
     "better-sqlite3": "11.0.0",
     "fs-extra": "^11.2.0",
@@ -37,5 +37,6 @@
   },
   "strapi": {
     "uuid": "81171bc1-a14a-405a-bfa1-1707dbcc7380"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
